@@ -17,6 +17,8 @@
     "@types/restify": "^2.0.42"
   },
   "scripts": {
+    "prebuild": "rm -rf dist",
+    "prestart": "npm run build",
     "start": "node ./server.js",
     "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
